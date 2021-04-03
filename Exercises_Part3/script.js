@@ -36,7 +36,8 @@ const countVowelsV2 = (inputString) => {
     const vowels = ["a", "e", "i", "o", "u"];
   
     for (let i = 0; i < inputString.length; i++) {
-      if (vowels.includes(inputString[i].toLowerCase())) counter++;
+      if (vowels.includes(inputString[i].toLowerCase())) 
+      counter++;
     }
   
     return counter;
