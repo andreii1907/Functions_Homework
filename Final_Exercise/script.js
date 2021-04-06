@@ -6,14 +6,16 @@ function numberExtraction(string) {
             newArray.push(array[i]);
         }
     }
-    console.log(newArray);
+    let salary = Number(newArray[0]);
+    let bonus = Number(newArray[1]);
+    let freelancing = Number(newArray[2]);
 
-    newArray.join
+    let totalIncome = salary * 12 + bonus + freelancing * 12;
+    console.log('Venitul total anual al lui Ion este de: ' + totalIncome + ' lei.');
 
-    let totalIncome = newArray[0] * 12 + newArray[1] + newArray[2] * 12;
-    console.log('Venitul total al lui Ion este de: ' + totalIncome);
-    return totalIncome;
-}
+    // let totalIncomeJohn = (salary * 4.8) * 12 + bonus + (freelancing * 4.3) * 12;
+    // aici nu am reusit sa diferientez moneda astfel incat sa calculez calculul de mai sus
+};
 
 numberExtraction('Ion castiga 5000 lei/luna din salariu, 10000 lei/an bonus si 1500 lei/luna din freelancing.');
-// numberExtraction('')
+// numberExtraction('John castiga 1000 euro/luna din salariu, 9000 lei/an bonus si 1000 usd/luna din freelancing.');
