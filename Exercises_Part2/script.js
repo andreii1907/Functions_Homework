@@ -28,10 +28,19 @@ console.log(getDistance({ x: 7, y: 4 }, { x: 13, y: 9 }));
 
 // ------- Exercise 3 ------- // 
 
-// function getDistancesArray(pair1, pair2) {
-//     const distanceArrays = (pair1.x - pair2.x) ** 2 + (pair1.y - pair2.y) ** 2;
-//     return Math.sqrt(distanceArrays); 
-// }
+function getDistanceArray(points){
+    const result = [];
+    for(const pointPair of points){
+        const xDifference = pointPair[1].x - pointPair[0].x;
+        const yDifference = pointPair[1].y - pointPair[0].y;
+      
+        const distance = Math.sqrt(Math.pow(xDifference,2) + Math.pow(yDifference,2));
+        result.push(distance);
+    }
+    return result;
+  }
   
-// console.log(getDistancesArray([[{ x: 2, y: 3 }, { x: 1, y: 4 }]
-//     [{ x: -1, y: 2 }, { x: 2, y: -3 }]]));
+  console.log(getDistanceArray([
+    [{x:2, y: 3}, {x:1, y:4}],
+    [{x:-1, y: 2}, {x:2, y:-3}]
+  ]));
